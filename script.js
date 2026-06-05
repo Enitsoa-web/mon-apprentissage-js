@@ -23,7 +23,7 @@ console.log(titre.textContent);
 
 /*Mini projet*/
 
-let titre1= document.querySelector("#titre1");
+let titre1 = document.querySelector("#titre1");
 let message = document.querySelector("#message");
 
 let heure = new Date().getHours();
@@ -31,20 +31,17 @@ console.log(heure);
 
 if (heure >= 5 && heure < 12) {
     titre1.textContent = "Bonjour !";
-    message.textContent=  "Bonne matinée, bienvenue sur notre site web.";
-}
-else if (heure >= 12 && heure < 18) {
-    titre1.textContent = "Bon après-midi !";
-    message.textContent = "Bonne après-midi, profitez de votre journée sur notre site web.";
+    message.textContent = "Bonne matinée, bienvenue sur notre site web.";
 }
 
-else if (heure >= 12 && heure < 5){
-    titre1.textContent = "Bonne nuit !";
-    message.textContent = "Bonne nuit, reposez-vous bien et à bientôt sur notre site web.";
+else if (heure >= 12 && heure < 18) {
+    titre1.textContent = "Bon après-midi !";
+    message.textContent = "Profitez de votre après-midi sur notre site web.";
 }
+
 else {
     titre1.textContent = "Bonsoir !";
-    message.textContent = "Bonne soirée, profitez de votre temps sur notre site web.";
+    message.textContent = "Bonne soirée ou bonne nuit, reposez-vous bien.";
 }
 
 /*Bonus* Mini projet*/
