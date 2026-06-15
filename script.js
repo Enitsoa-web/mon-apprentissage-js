@@ -106,3 +106,58 @@ if(montant >= 200000) {
 } else {
     promo.textContent = `Pour ${montant} Ar, la livraison est de 5000 Ar.`;
 }
+
+/*Fonctions*/
+/*/*Exercice 1*/
+function direBonjour(prenom) {
+    console.log(`Bonjour, ${prenom} !`);
+}
+direBonjour("Haingo");
+
+/*Exercice 2*/
+function direBonjour(prenom, ville) {
+    console.log(`Bonjour, ${prenom} ! Vous vivez à ${ville}.`);
+}
+direBonjour("Haingo", "Antananarivo");
+
+/*Exercice 3*/
+function addition(a, b) {
+    return a + b;
+}
+let resultat = addition(5, 3);
+console.log(`Le résultat de l'addition est : ${resultat}.`);
+
+/*Exercice 4*/
+function calculerprix(prix, quantite) {
+    return prix * quantite;
+}
+let total = calculerprix(15000, 3);
+console.log(`Le prix total est : ${total} Ar.`);
+
+/*Mini projet : Calcul du prix total */
+function calculerprix(prix, quantite) {
+    return prix * quantite;
+}
+let prixtotal = calculerprix(25000, 3);
+let affresultat = document.querySelector("#resultat");
+affresultat.textContent = `Le prix total est : ${prixtotal} Ar.`;
+
+/*Defi jour 4 calcul remise*/
+function calculerRemise(prix1, remise) {
+    let prixFinal;
+    
+    if(prix1 >= 100000) {
+        let montantRemise = prix1 * (remise / 100);
+        prixFinal = prix1 - montantRemise;
+    }
+    
+     else {
+        prixFinal = prix1;
+    }
+    console.log(`Le prix final est : ${prixFinal} Ar.`);
+        let affremise = document.querySelector("#remise");
+        affremise.textContent = `Le prix final est : ${prixFinal} Ar.`;
+}
+
+calculerRemise(150000, 10);
+
